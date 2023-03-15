@@ -1,3 +1,36 @@
-<main class="dashboard">
-  <h1 class="dashboard__title">Главная страница</h1>
-</main>
+<section class="dashboard">
+  <aside class="dashboard__sidebar" [class]="isSidebarShown ? '' : 'dashboard__sidebar__hidden'">
+    <nav>
+      <ul class="dashboard__sidebar__list">
+        <li
+          *ngFor="let category of topCategories"
+          class="dashboard__sidebar__list__category"
+        >
+          <span (click)="chooseTopCategory($event)">{{ category.name }}</span>
+          <span class="dashboard__sidebar__list__category__count">
+            {{ (category.count) > 0 ? category.count : 0}}
+          </span>
+        </li>
+      </ul>
+      <br>
+      <ul class="dashboard__sidebar__list">
+        <li
+          *ngFor="let category of categories"
+          class="dashboard__sidebar__list__category"
+        >
+          <span (click)="chooseCategory($event)">{{ category.name }}</span>
+          <span class="dashboard__sidebar__list__category__count">
+            {{ (category.count) > 0 ? category.count : 0}}
+          </span>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="dashboard__content">
+    <span class="dashboard__content__toggle" (click)="sidebarToggle()">X</span>
+    <h1 class="dashboard__content__title">{{ currentCategory }}</h1>
+    <div style="margin: 50px">
+      <span style="color: blueviolet; text-decoration: underline; margin: 20px; cursor: pointer" *ngFor="let subCategory of subCategories"> {{ subCategory }} </span>
+    </div>
+  </main>
+</section>

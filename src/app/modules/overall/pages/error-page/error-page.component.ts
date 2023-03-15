@@ -23,12 +23,8 @@ export class ErrorPageComponent implements OnInit {
 
   public defineCurrentPath(): void {
     this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
         this.currentPath = this.router.url;
         this.fullPath = `${this.url}${this.currentPath}`;
-        console.log(this.currentPath);
-        console.log(this.url);
-      }
     });
   }
 

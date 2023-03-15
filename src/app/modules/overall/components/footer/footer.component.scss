@@ -3,20 +3,21 @@
 :host {
   .footer {
     @include flex(row, center, center);
-    background-color: $color-main-yellow;
+    background-color: white;
     min-height: $footer-height-min;
     max-height: $footer-height-min;
     box-shadow: $box-shadow-easy;
     max-width: 100%;
+    z-index: 9999;
     &__logo {
       font-weight: bold;
       font-size: $h-font-size-large-x;
       cursor: pointer;
-      color: $color-main-velvet;
+      color: $color-main-yellow;
       transition: 0.2s linear;
       margin-bottom: 0;
       &:hover {
-        color: $color-white-default;
+        color: $color-main-velvet;
       }
     }
   }
