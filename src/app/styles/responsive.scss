@@ -1,0 +1,65 @@
+//COMPUTER. Dimensions
+$c-responsive-5120-width: 5120px;
+$c-responsive-3840-width: 3840px;
+$c-responsive-3200-width: 3200px;
+$c-responsive-2560-width: 2560px; //2560×1440 - 7,41%
+$c-responsive-1920-width: 1920px; //1920×1080 – 22.97% | GENERAL!
+$c-responsive-1792-width: 1792px; //1792×1120 - 2,06%
+$c-responsive-1680-width: 1680px; //1680×1050 - 4,28%
+$c-responsive-1600-width: 2560px; //1600×900 – 3.58%
+$c-responsive-1536-width: 1536px; //1536×864 – 11.34%
+$c-responsive-1440-width: 1440px; //1440×900 – 5.85%
+$c-responsive-1366-width: 1366px; //1366×768 – 17.88%
+$c-responsive-1280-width: 1280px; //1280×720 – 6.18%
+
+//MOBILE. Dimensions
+$m-responsive-546-width: 546px;
+$m-responsive-540-width: 540px;
+$m-responsive-446-width: 446px;
+$m-responsive-414-width: 414px; //414×896 – 6.18%
+$m-responsive-412-width: 412px; //412×915 – 4.82%
+$m-responsive-393-width: 393px; //393×873 – 3.58%
+$m-responsive-390-width: 390px; //390×844 – 5.24%
+$m-responsive-374-width: 374px;
+$m-responsive-360-width: 360px; //360×800 – 9.15% / 360×640 – 5.49% / 360×780 – 4.2% | GENERAL!
+$m-responsive-323-width: 323px;
+$m-responsive-280-width: 280px;
+
+//MOBILE. Gadgets
+$m-responsive-iphone-se-width: $m-responsive-374-width;
+$m-responsive-iphone-xr-width: $m-responsive-414-width;
+$m-responsive-iphone-12-pro-width: $m-responsive-390-width;
+$m-responsive-pixel-5-width: $m-responsive-393-width;
+$m-responsive-samsung-galaxy-s-8-plus-width: $m-responsive-360-width;
+$m-responsive-samsung-galaxy-s-20-ultra-width: $m-responsive-412-width;
+$m-responsive-surface-duo-width: $m-responsive-540-width;
+$m-responsive-samsung-galaxy-fold-width: $m-responsive-280-width;
+$m-responsive-samsung-galaxy-a51-71-width: $m-responsive-412-width;
+
+//TABLET. Dimensions
+$t-responsive-1280-width: 1280px; //1280×800 — 6,88%
+$t-responsive-1112-width: 1112px;
+$t-responsive-1024-width: 1024px;
+$t-responsive-1005-width: 1005px;
+$t-responsive-972-width: 972px;
+$t-responsive-962-width: 962px; //962×601 — 3,24%
+$t-responsive-912-width: 912px;
+$t-responsive-860-width: 860px;
+$t-responsive-834-width: 834px;
+$t-responsive-810-width: 810px; //810×1080 — 6,63%
+$t-responsive-800-width: 800px; //800×1280 — 6,31%
+$t-responsive-782-width: 782px;
+$t-responsive-768-width: 768px; //768×1024 — 32,74% | GENERAL!
+$t-responsive-678-width: 678px;
+$t-responsive-601-width: 601px; //601×962 — 5,02%
+
+//TABLET. Gadgets
+$t-responsive-ipad-air-width: $t-responsive-601-width;
+$t-responsive-ipad-mini-width: $t-responsive-768-width;
+$t-responsive-surface-pro-7-width: $t-responsive-912-width;
+$t-responsive-nest-hub-width: $t-responsive-1280-width;
+$t-responsive-nest-hub-max-width: $t-responsive-1280-width;
+$ipad-pro-max-device-width: $t-responsive-1112-width;
+$ipad-pro-min-device-width: $t-responsive-834-width;
+$ipad-max-device-width: $t-responsive-1024-width;
+$ipad-min-device-width: $t-responsive-768-width;

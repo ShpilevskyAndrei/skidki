@@ -1,0 +1,138 @@
+@import "src/app/styles/@general-styles";
+
+:host {
+  .header {
+    @include flex(row, center, space-between);
+    background-color: $color-white-default;
+    min-height: $header-height-min;
+    box-shadow: $box-shadow-easy;
+    position: sticky;
+    top: 0;
+    max-width: 100%;
+    &__logo {
+      display: flex;
+      &__name {
+        font-weight: bold;
+        font-size: $h-font-size-large-x;
+        cursor: pointer;
+        color: $color-main-velvet;
+        transition: 0.2s linear;
+        margin-bottom: 0;
+        &:hover {
+          color: $color-main-yellow;
+        }
+      }
+      &__slogan {
+        padding: 0;
+        margin: 0;
+        font-size: $p-font-size-small-xxx;
+        color: $color-main-light-gray;
+      }
+    }
+    &__nav-burger {
+      display: flex;
+      @media screen and (min-width: 1105px) {
+        display: none;
+      }
+    }
+    &__nav {
+      @media screen and (max-width: 1105px) {
+        display: none;
+      }
+      &__list {
+        display: flex;
+        padding: 0 $offset-small-x;
+        &__row {
+          @include anim-hover-underline;
+          @include flex(row, center, center);
+          color: $color-main-velvet;
+          font-weight: 500;
+          cursor: pointer;
+          flex: 1 1 auto;
+          margin: 0 $offset-medium;
+          transition: all 0.5s;
+          &__icon {
+            margin-right: $offset-small-x;
+          }
+          &__active {
+            font-size: $p-font-size-large-x;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    &__find {
+      @include flex(row, center, center);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid white;
+      transition: 0.2s linear;
+      &:hover {
+        border-color: $color-main-yellow;
+      }
+      &__icon {
+        cursor: pointer;
+        color: $color-main-velvet;
+        transition: 0.2s linear;
+      }
+    }
+    &__account {
+      @include flex(row, center, flex-end);
+      padding: 0 $offset-small-x;
+      &__login-button {
+        @include button-additional;
+        flex: 1 1 auto;
+        margin: 0 $offset-small-x;
+      }
+      &__signup-button {
+        @include button-accent;
+        flex: 1 1 auto;
+        margin: 0 $offset-small-x;
+      }
+      &__logout-button {
+        @include button-additional;
+        flex: 1 1 auto;
+        margin: 0 $offset-small-x;
+      }
+      &__my-account-button {
+        @include button-accent;
+        flex: 1 1 auto;
+        margin: 0 $offset-small-x;
+      }
+    }
+  }
+
+  .find-box {
+    @include flex(row, center, center);
+    min-width: 100%;
+    position: fixed;
+    opacity: 0;
+    animation: smoothAppearance 0.5s forwards;
+    &__element {
+      min-width: 70%;
+      margin-top: $offset-large-xxxx;
+      border-radius: 50px;
+      background-color: $color-white-default;
+      box-shadow: $box-shadow-easy;
+      padding-right: $offset-large;
+      @include flex(row, center, space-between);
+      &__input {
+        width: 100%;
+        border: 2px solid $color-main-light-gray;
+        font-size: $p-font-size-large-xxx;
+        border-radius: 25px;
+        padding: $offset-small $offset-large;
+      }
+      &__icon {
+        cursor: pointer;
+        color: $color-main-velvet;
+        margin-left: $offset-large;
+      }
+    }
+  }
+
+  .form-disabled {
+    animation: slowDisappearance 0.5s forwards;
+  }
+}

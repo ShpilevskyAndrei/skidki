@@ -1,0 +1,6 @@
+$header-height-min: 90px;
+$ad-ahead-height-min: 80px;
+$progress-bar-height-min: 4px;
+$footer-height-min: 90px;
+
+$content-height-size: calc(100% - $header-height-min - $ad-ahead-height-min - $progress-bar-height-min - $footer-height-min)

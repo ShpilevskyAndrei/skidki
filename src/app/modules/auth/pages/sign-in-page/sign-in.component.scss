@@ -1,0 +1,7 @@
+@import "src/app/styles/@general-styles";
+
+:host {
+  .sign-in {
+    min-height: $content-height-size;
+  }
+}

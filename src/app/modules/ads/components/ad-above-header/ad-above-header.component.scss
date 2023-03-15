@@ -1,0 +1,27 @@
+@import "src/app/styles/@general-styles";
+
+:host .ad-above-header {
+  max-width: 100%;
+  min-height: $ad-ahead-height-min;
+  max-height: $ad-ahead-height-min;
+  background-color: $color-main-yellow;
+  @include flex(row, center, center);
+  a {
+    height: 80px;
+    .ad-above-header__image {
+      object-fit: cover;
+      width: 100%;
+      min-height: 80px;
+      cursor: pointer;
+    }
+  }
+
+  &__text {
+    font-size: $h-font-size-large-xx;
+    letter-spacing: 8px;
+    margin: 0;
+    padding: 0;
+    color: $color-main-velvet;
+    font-weight: bold;
+  }
+}

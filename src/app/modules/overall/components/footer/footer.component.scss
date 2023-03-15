@@ -1,0 +1,23 @@
+@import "src/app/styles/@general-styles";
+
+:host {
+  .footer {
+    @include flex(row, center, center);
+    background-color: $color-main-yellow;
+    min-height: $footer-height-min;
+    max-height: $footer-height-min;
+    box-shadow: $box-shadow-easy;
+    max-width: 100%;
+    &__logo {
+      font-weight: bold;
+      font-size: $h-font-size-large-x;
+      cursor: pointer;
+      color: $color-main-velvet;
+      transition: 0.2s linear;
+      margin-bottom: 0;
+      &:hover {
+        color: $color-white-default;
+      }
+    }
+  }
+}

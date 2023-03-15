@@ -1,0 +1,35 @@
+@import "animations";
+@import "font-sizes";
+@import "colors";
+@import "offsets";
+
+@mixin button {
+  padding: $offset-small-x $offset-medium;
+  border: 2px solid;
+  border-radius: $offset-small-xxx $offset-small;
+  cursor: pointer;
+  font-size: $p-font-size-large;
+}
+
+@mixin button-accent {
+  @include button;
+  border-color: $color-main-velvet;
+  color: $color-main-velvet;
+  background-color: $color-white-default;
+  &:hover {
+    color: $color-white-default;
+    background-color: $color-main-velvet;
+  }
+  &:disabled {
+    color: $color-white-default;
+    background-color: $color-main-light-gray;
+    border-color: $color-main-light-gray;
+  }
+}
+
+@mixin button-additional {
+  @include button;
+  color: $color-main-velvet;
+  background-color: $color-white-default;
+  border-color: $color-white-default;
+}
