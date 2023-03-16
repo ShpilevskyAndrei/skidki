@@ -9,6 +9,7 @@
     position: sticky;
     top: 0;
     max-width: 100%;
+    z-index: 10;
     &__logo {
       display: flex;
       &__name {

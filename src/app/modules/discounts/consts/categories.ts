@@ -1,32 +1,39 @@
+import {
+  AutoCentersSubCategories,
+  BeautySaloonSubCategories,
+  EntertainmentSubCategories, FoodAllCentersSubCategories,
+  FoodDeliverySubCategories, MedCentersSubCategories
+} from "./sub-categories";
+
 export const CATEGORIES = [
   {
     name: 'Доставка еды',
-    subCategories: [],
+    subCategories: FoodDeliverySubCategories,
     count: getRandomInt()
   },
   {
     name: 'Салоны красоты',
-    subCategories: [],
+    subCategories: BeautySaloonSubCategories,
     count: getRandomInt()
   },
   {
     name: 'Развлечения',
-    subCategories: [],
+    subCategories: EntertainmentSubCategories,
     count: getRandomInt()
   },
   {
     name: 'Медцентры',
-    subCategories: [],
+    subCategories: MedCentersSubCategories,
     count: getRandomInt()
   },
   {
     name: 'Авто',
-    subCategories: [],
+    subCategories: AutoCentersSubCategories,
     count: getRandomInt()
   },
   {
     name: 'Вся еда',
-    subCategories: [],
+    subCategories: FoodAllCentersSubCategories,
     count: getRandomInt()
   },
   {

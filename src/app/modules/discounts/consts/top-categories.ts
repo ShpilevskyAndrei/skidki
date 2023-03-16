@@ -2,6 +2,11 @@ import {CATEGORIES} from "./categories";
 
 export const TOP_CATEGORIES = [
   {
+    name: 'ВСЕ СКИДКИ',
+    subCategories: CATEGORIES,
+    count: getRandomInt()
+  },
+  {
     name: 'ХИТЫ',
     subCategories: CATEGORIES,
     count: getRandomInt()

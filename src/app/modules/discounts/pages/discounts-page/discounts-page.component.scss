@@ -1,0 +1,115 @@
+@import "src/app/styles/@general-styles";
+
+:host {
+  .discounts {
+    display: flex;
+    min-height: $content-height-size;
+    min-width: 100%;
+    overflow: auto;
+    &__sidebar {
+      width: 20%;
+      min-width: 200px;
+      max-width: 400px;
+      background-color: white;
+      box-shadow: $box-shadow-easy;
+      min-height: $content-height-size;
+      margin: 0 4px 4px;
+      padding: 25px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      left: -300px;
+      &__list {
+        margin: 0;
+        padding: 0;
+        &__category {
+          font-size: $p-font-size-medium;
+          font-weight: bold;
+          margin: $offset-medium;
+          cursor: pointer;
+          color: $color-main-velvet;
+          letter-spacing: 1px;
+          @include anim-hover-scale;
+          &__count {
+            font-size: $p-font-size-medium;
+            color: $color-main-yellow;
+          }
+        }
+      }
+      &__hidden {
+        left: -200%;
+      }
+    }
+    &__content {
+      &__toggle {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: none
+      }
+      position: relative;
+      box-sizing: border-box;
+      min-height: $content-height-size;
+      //height: auto;
+      width: 75%;
+      &__title {
+        font-size: $h-font-size-large-xxx;
+        text-decoration: underline;
+        color: $color-main-velvet;
+        margin: 30px;
+        font-weight: bold;
+      }
+      &__items {
+        margin: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        &__item {
+          margin: 10px;
+          min-width: 300px;
+          min-height: 150px;
+          max-width: 300px;
+          max-height: 150px;
+          background-color: $color-main-velvet;
+          @include flex(column, flex-start, flex-start);
+          cursor: pointer;
+          @include anim-hover-scale;
+          //border: 2px solid $color-main-yellow;
+          border-radius: 10px;
+          box-shadow: $box-shadow-strong;
+          position: relative;
+          &__title {
+            margin: 30px;
+            max-width: 100%;
+            word-wrap: break-word;
+            color: white;
+            font-size: $p-font-size-large-xx;
+            font-weight: bold;
+            letter-spacing: 1px;
+          }
+          &__count {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            color: $color-main-yellow;
+            font-size: $h-font-size-large-xxx;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .dashboard__sidebar::-webkit-scrollbar {
+    width: 7px;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  .dashboard__sidebar::-webkit-scrollbar-thumb {
+    background-color: $color-main-yellow;
+    border-radius: 5px;
+    max-height: 20px;
+  }
+}

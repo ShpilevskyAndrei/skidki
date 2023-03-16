@@ -2,70 +2,14 @@
 
 :host {
   .dashboard {
-    display: flex;
+    @include flex(column, center, center);
     min-height: $content-height-size;
-    height: $content-height-size;
     min-width: 100%;
-    &__sidebar {
-      width: 20%;
-      min-width: 200px;
-      max-width: 400px;
-      background-color: white;
-      box-shadow: $box-shadow-easy;
-      min-height: $content-height-size;
-      margin: 0 4px 4px;
-      padding: 25px;
-      overflow-y: auto;
-      overflow-x: hidden;
-      left: -300px;
-      &__list {
-        margin: 0;
-        padding: 0;
-        &__category {
-          font-size: $p-font-size-large-x;
-          font-weight: bold;
-          margin: $offset-medium;
-          cursor: pointer;
-          color: $color-main-velvet;
-          letter-spacing: 1px;
-          &__count {
-            font-size: $p-font-size-medium;
-            color: $color-main-yellow;
-          }
-        }
-      }
-      &__hidden {
-        left: -200%;
-      }
+    &__title {
+      font-size: $h-font-size-large-xxx;
+      color: $color-main-velvet;
+      margin: 30px;
+      font-weight: bold;
     }
-    &__content {
-      &__toggle {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-      }
-      position: relative;
-      min-height: $content-height-size;
-      @include flex(column, center, center);
-      width: 75%;
-      &__title {
-        font-size: $h-font-size-large-xxx;
-        color: $color-main-velvet;
-        margin: 30px;
-        font-weight: bold;
-      }
-    }
-  }
-
-  .dashboard__sidebar::-webkit-scrollbar {
-    width: 7px;
-    background-color: white;
-    border-radius: 5px;
-  }
-
-  .dashboard__sidebar::-webkit-scrollbar-thumb {
-    background-color: $color-main-yellow;
-    border-radius: 5px;
-    max-height: 20px;
   }
 }
