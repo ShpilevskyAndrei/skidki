@@ -11,21 +11,18 @@
     max-width: 100%;
     z-index: 10;
     &__logo {
-      display: flex;
+      @include flex(column, center, center);
       &__name {
         font-weight: bold;
         font-size: $h-font-size-large-x;
         cursor: pointer;
         color: $color-main-velvet;
         transition: 0.2s linear;
-        margin-bottom: 0;
         &:hover {
           color: $color-main-yellow;
         }
       }
       &__slogan {
-        padding: 0;
-        margin: 0;
         font-size: $p-font-size-small-xxx;
         color: $color-main-light-gray;
       }

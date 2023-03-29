@@ -47,3 +47,16 @@ html::-webkit-scrollbar-thumb {
 html{
   overflow-y: scroll;
 }
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+router-outlet + * {
+  animation: fade 1s;
+}
