@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { AdsModule } from './modules/ads/ads.module';
 import { SharedModule } from './modules/shared/shared.module';
 import { OverallModule } from './modules/overall/overall.module';
-import { interceptorProviders } from './modules/shared/interceptors/interceptors-provider';
+import { INTERCEPTORS } from './modules/shared/interceptors/@interceptors';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,11 +23,7 @@ import { interceptorProviders } from './modules/shared/interceptors/interceptors
     SharedModule,
     MatNativeDateModule,
   ],
-  providers: [
-    interceptorProviders.progressBar,
-    interceptorProviders.auth,
-    { provide: MAT_DATE_LOCALE, useValue: 'en-GB' },
-  ],
+  providers: [...INTERCEPTORS, { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
