@@ -2,14 +2,31 @@
 
 :host {
   .sign-up {
-    @include flex(column, center, center);
+    @include flex(row, center, space-between);
     min-height: $content-height-size;
-    min-width: 100%;
-    &__title {
-      font-size: $h-font-size-large-xxx;
-      color: $color-main-velvet;
-      margin: 30px;
-      font-weight: bold;
+    &__text-container {
+      &__page {
+        font-size: $h-font-size-large-x;
+        color: $color-main-velvet;
+        font-weight: bold;
+      }
+      &__text {
+        &__site {
+          color: $color-main-velvet;
+          font-weight: bold;
+        }
+      }
+    }
+    &__form {
+      margin: $offset-large-xxx 0;
+      &__radio-group {
+        @include flex(column, flex-start, flex-start);
+      }
+    }
+    &__btn-container {
+      &__btn {
+        @include button-accent;
+      }
     }
   }
 }

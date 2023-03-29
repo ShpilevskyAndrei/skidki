@@ -1,3 +1,77 @@
-<main class="sign-in">
-  <h1 class="sign-in__title">Страница авторизации</h1>
+<main class="sign-in container">
+  <section
+    style="
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: start;
+    "
+  >
+    <div>
+      <div class="sign-in__text-container">
+        <h1 class="sign-in__text-container__page">Авторизация</h1>
+        <p class="sign-in__text-container__text">
+          Мы рады приветствовать Вас на нашем агрегаторе скидок
+          <span class="sign-in__text-container__text__site">SKIDKI.UZ</span>
+        </p>
+        <p class="sign-in__text-container__text">
+          Для входа в аккаунт - введите данные, которые Вы указали при
+          регистрации
+        </p>
+      </div>
+
+      <form class="sign-in__form" action="">
+        <mat-form-field class="sign-in__form__field" appearance="fill">
+          <mat-label>Эл. почта</mat-label>
+          <input
+            class="sign-in__form__field__input"
+            matInput
+            placeholder="ivanov.ii@gmail.com"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="sign-in__form__field" appearance="fill">
+          <mat-label>Введите пароль</mat-label>
+          <input
+            class="sign-in__form__field__input"
+            placeholder="**********"
+            matInput
+            [type]="isPasswordHidden ? 'password' : 'text'"
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="isPasswordHidden = !isPasswordHidden"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="isPasswordHidden"
+          >
+            <mat-icon>{{
+              isPasswordHidden ? "visibility_off" : "visibility"
+            }}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <button class="sign-in__form__btn">Войти</button>
+      </form>
+
+      <div class="sign-in__aside">
+        <p class="sign-in__aside__text">Забыл пароль</p>
+        <p class="sign-in__aside__text" routerLink="../up">Нет аккаунта</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="width: 50%; min-height: 100%">
+    <img
+      style="
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 100%;
+        min-height: 100%;
+      "
+      src="https://i.ibb.co/hB72XnC/discounts.jpg"
+      alt=""
+    />
+  </section>
 </main>

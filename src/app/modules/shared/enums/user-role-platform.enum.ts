@@ -3,5 +3,5 @@ export enum UserRolePlatformEnum {
   Company = 'company',
   Guest = 'guest',
   Admin = 'admin',
-  Moderator = 'moderator'
+  Moderator = 'moderator',
 }

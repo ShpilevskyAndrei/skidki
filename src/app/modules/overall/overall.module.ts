@@ -16,8 +16,8 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
 import { SharedModule } from '../shared/shared.module';
 import { ClickOutsideDirective } from '../shared/directives/click-outside.directive';
 import { FooterComponent } from './components/footer/footer.component';
-import { FooterContainerComponent } from "./components/footer/footer-container.component";
-import { MatDialogModule } from "@angular/material/dialog";
+import { FooterContainerComponent } from './components/footer/footer-container.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { MatDialogModule } from "@angular/material/dialog";
     DashboardPageContainerComponent,
     ErrorPageComponent,
     ProgressBarComponent,
-    ClickOutsideDirective
+    ClickOutsideDirective,
   ],
   imports: [
     CommonModule,
@@ -40,12 +40,9 @@ import { MatDialogModule } from "@angular/material/dialog";
     MatIconModule,
     MatInputModule,
     SharedModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   bootstrap: [],
-  exports: [
-    HeaderContainerComponent,
-    FooterContainerComponent
-  ],
+  exports: [HeaderContainerComponent, FooterContainerComponent],
 })
 export class OverallModule {}

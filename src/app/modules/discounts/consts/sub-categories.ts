@@ -1,369 +1,363 @@
 export const FoodDeliverySubCategories = [
   {
     name: 'Доставка за МКАД',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Суши',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Пицца',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Пицца',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Пироги',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Шашлык',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Десерты',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'WOK',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Обеды',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Мясо и рыба',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Паста',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Разное',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Шаурма',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Экспресс-доставка',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: '1+1 или подарок',
-    count: getRandomInt()
-  }
-]
+    count: getRandomInt(),
+  },
+];
 
 export const BeautySaloonSubCategories = [
   {
     name: 'Лазерная эпиляция и АУВ',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Коррекция фигуры',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Татуировки',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Сертификаты',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Перманентный макияж и микроблейдинг',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Солярии',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'СПА и релакс',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Стрижки',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Прически и макияж',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Удаление новообразований и рубцов',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Маникюр',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Педикюр',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Ресницы и брови',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Уход за волосами',
-    count: getRandomInt()
-  }
-]
+    count: getRandomInt(),
+  },
+];
 
 export const EntertainmentSubCategories = [
   {
     name: 'Бассейны',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Детские центры',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Зоопарк',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Аквапарки',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Батуты',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Картинг. Квадроциклы',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Концерты.Спектакли.Выставки',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Экскурсии. Музеи',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Боулинг',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Бильярд',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Прогулка верхом',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Квесты',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Бани и сауны',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Виртуальная реальность',
-    count: getRandomInt()
-  }
-]
+    count: getRandomInt(),
+  },
+];
 
 export const MedCentersSubCategories = [
   {
     name: 'Неврология',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Терапия',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Другое',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'УЗИ',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Массаж',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Ортопедия',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Омоложение',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Эндокринология',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Гастроэнтерология',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Лазер',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Психотерапия',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Гинекология',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Стоматология',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Диагностика. Обследование',
-    count: getRandomInt()
-  }
-]
+    count: getRandomInt(),
+  },
+];
 
 export const AutoCentersSubCategories = [
   {
     name: 'Шиномонтаж',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Автомойки',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Диагностика подвески',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Компьютерная диагностика',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Развал-схождение',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Замена жидкостей',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Полировка',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Нано',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Заправка автокондиционера',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Регулировка фар',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Автошколы',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Химчистка авто',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Техосмотр',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Ремонт авто',
-    count: getRandomInt()
-  }
-]
+    count: getRandomInt(),
+  },
+];
 
 export const FoodAllCentersSubCategories = [
   {
     name: 'Доставка еды',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Самовывоз еды (выгоднее)',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Рестораны',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Суши',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Пицца',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Шашлыки',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Пироги',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Завтраки',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Бургеры',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Шаурма',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Фудбоксы и кейтеринг',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'WOK',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Супы',
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Салаты',
-    count: getRandomInt()
-  }
-]
+    count: getRandomInt(),
+  },
+];
 
-
-
-
-
-
-function getRandomInt() {
-  let min = -100;
-  let max = 100;
+function getRandomInt(): number {
+  const min = -100;
+  const max = 100;
   return Math.floor(Math.random() * (max - min) + min);
 }
-

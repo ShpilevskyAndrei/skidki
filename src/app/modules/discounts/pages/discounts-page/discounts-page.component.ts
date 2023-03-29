@@ -1,30 +1,32 @@
-import { Component } from '@angular/core';
-import {TOP_CATEGORIES} from "../../consts/top-categories";
-import {CATEGORIES} from "../../consts/categories";
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+
+import { TOP_CATEGORIES } from '../../consts/top-categories';
+import { CATEGORIES } from '../../consts/categories';
 
 @Component({
   selector: 'app-discounts-page',
   templateUrl: './discounts-page.component.html',
-  styleUrls: ['./discounts-page.component.scss']
+  styleUrls: ['./discounts-page.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DiscountsPageComponent {
+export class DiscountsPageComponent implements OnInit {
   public topCategories = TOP_CATEGORIES;
   public categories = CATEGORIES;
-  public city = 'ТАШКЕНТ'
+  public city = 'ТАШКЕНТ';
   public currentCategory = 'ВСЕ СКИДКИ';
   public subCategories: any[] = [];
   public isSidebarShown = true;
 
   public ngOnInit(): void {
-    this.chooseAllCategory(this.currentCategory)
+    this.chooseAllCategory(this.currentCategory);
   }
 
   public sidebarToggle(): void {
-    this.isSidebarShown = !this.isSidebarShown
+    this.isSidebarShown = !this.isSidebarShown;
   }
 
   public chooseCategory(e: any): void {
-    this.currentCategory = e.target.innerText
+    this.currentCategory = e.target.innerText;
 
     for (let i = 0; i < this.categories.length; i++) {
       if (this.categories[i].name === this.currentCategory) {
@@ -34,7 +36,7 @@ export class DiscountsPageComponent {
   }
 
   public chooseTopCategory(e: any): void {
-    this.currentCategory = e.target.innerText
+    this.currentCategory = e.target.innerText;
 
     for (let i = 0; i < this.topCategories.length; i++) {
       if (this.topCategories[i].name === this.currentCategory) {

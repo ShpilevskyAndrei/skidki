@@ -3,5 +3,5 @@ export interface INavItem {
   path: string;
   img?: string;
   icon?: string;
-  iconColor?: string
+  iconColor?: string;
 }

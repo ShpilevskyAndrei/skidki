@@ -1,5 +1,8 @@
 <section class="discounts">
-  <aside class="discounts__sidebar" [class]="isSidebarShown ? '' : 'dashboard__sidebar__hidden'">
+  <aside
+    class="discounts__sidebar"
+    [class]="isSidebarShown ? '' : 'dashboard__sidebar__hidden'"
+  >
     <nav>
       <ul class="discounts__sidebar__list">
         <li
@@ -8,11 +11,11 @@
         >
           <span (click)="chooseTopCategory($event)">{{ category.name }}</span>
           <span class="discounts__sidebar__list__category__count">
-            {{ (category.count) > 0 ? category.count : 0}}
+            {{ category.count > 0 ? category.count : 0 }}
           </span>
         </li>
       </ul>
-      <br>
+      <br />
       <ul class="discounts__sidebar__list">
         <li
           *ngFor="let category of categories"
@@ -20,7 +23,7 @@
         >
           <span (click)="chooseCategory($event)">{{ category.name }}</span>
           <span class="discounts__sidebar__list__category__count">
-            {{ (category.count) > 0 ? category.count : 0}}
+            {{ category.count > 0 ? category.count : 0 }}
           </span>
         </li>
       </ul>
@@ -28,7 +31,8 @@
   </aside>
   <main class="discounts__content">
     <span class="discounts__content__toggle" (click)="sidebarToggle()">X</span>
-    <h1 class="discounts__content__title">{{ currentCategory }}
+    <h1 class="discounts__content__title">
+      {{ currentCategory }}
       <span *ngIf="currentCategory === 'ВСЕ СКИДКИ'">Г. {{ city }}</span>
     </h1>
     <section class="discounts__content__items">
@@ -37,30 +41,21 @@
           *ngIf="subCategory.count > 0"
           class="discounts__content__items__item"
         >
+          <img
+            class="image1"
+            src="https://i.ibb.co/hB72XnC/discounts.jpg"
+            alt=""
+          />
+          <span class="discounts__content__items__item__title"
+            >{{ subCategory.name }}
+          </span>
           <span
-            class="discounts__content__items__item__title"
-          >{{ subCategory.name }}</span>
-          <span
-            class="discounts__content__items__item__count"
+            class="realistic-marker-highlight discounts__content__items__item__count"
           >
-          {{ subCategory.count > 0 ? subCategory.count : 0 }}
+            {{ subCategory.count > 0 ? subCategory.count : 0 }}
           </span>
         </div>
       </ng-container>
-
-      <!--      <span-->
-      <!--        style="color: blueviolet; text-decoration: underline; margin-left: 20px; cursor: pointer"-->
-      <!--        *ngFor="let subCategory of subCategories"-->
-      <!--        >-->
-      <!--        <span *ngIf="subCategory.count > 0">{{ subCategory.name }}</span>-->
-
-      <!--        <span style="color: orange; cursor: pointer"-->
-      <!--              *ngIf="subCategory.count > 0">-->
-      <!--        {{ subCategory.count > 0 ? subCategory.count : 0 }}-->
-      <!--      </span>-->
-      <!--      </span>-->
-
     </section>
   </main>
 </section>
-

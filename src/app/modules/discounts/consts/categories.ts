@@ -1,146 +1,148 @@
 import {
   AutoCentersSubCategories,
   BeautySaloonSubCategories,
-  EntertainmentSubCategories, FoodAllCentersSubCategories,
-  FoodDeliverySubCategories, MedCentersSubCategories
-} from "./sub-categories";
+  EntertainmentSubCategories,
+  FoodAllCentersSubCategories,
+  FoodDeliverySubCategories,
+  MedCentersSubCategories,
+} from './sub-categories';
 
 export const CATEGORIES = [
   {
     name: 'Доставка еды',
     subCategories: FoodDeliverySubCategories,
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Салоны красоты',
     subCategories: BeautySaloonSubCategories,
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Развлечения',
     subCategories: EntertainmentSubCategories,
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Медцентры',
     subCategories: MedCentersSubCategories,
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Авто',
     subCategories: AutoCentersSubCategories,
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Вся еда',
     subCategories: FoodAllCentersSubCategories,
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
-    name:   'Самовывоз еды (выгоднее)',
+    name: 'Самовывоз еды (выгоднее)',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Рестораны',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Подарочные сертификаты',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Недвижимость',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Отели. Квартиры. Усадьбы',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Детям',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'К празднику',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Здоровье и спорт',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Товары и подарки',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
-    name: 'Цветы' ,
+    name: 'Цветы',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Клининг/Уборка',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
-    name: 'Еда' ,
+    name: 'Еда',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
-    name: 'Туризм' ,
+    name: 'Туризм',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
-    name: 'Обучение' ,
+    name: 'Обучение',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
 
   {
     name: 'Для животных',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Продажа готового бизнеса',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Ремонт дома. Стройка',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
     name: 'Кредиты',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
-    name: 'Мебель' ,
+    name: 'Мебель',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
   {
-    name:   'Прочее',
+    name: 'Прочее',
     subCategories: [],
-    count: getRandomInt()
+    count: getRandomInt(),
   },
-]
+];
 
-function getRandomInt() {
-  let min = -100;
-  let max = 100;
+function getRandomInt(): number {
+  const min = -100;
+  const max = 100;
   return Math.floor(Math.random() * (max - min) + min);
 }

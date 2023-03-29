@@ -1,0 +1,208 @@
+<main class="sign-in content-container">
+  <div style="display: flex; justify-content: space-between">
+    <h1 class="sign-in__title">Страница регистрации</h1>
+  </div>
+
+  <section class="sign-in__forms-container">
+    <form action="">
+      <mat-form-field appearance="fill">
+        <mat-label>Кто вы?</mat-label>
+        <mat-select>
+          <mat-option value="company">Компания</mat-option>
+          <mat-option value="user">Человек</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" style="margin-left: 30px">
+        <mat-label>Город</mat-label>
+        <mat-select>
+          <mat-option value="tashkent">Ташкент</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+
+    <section class="sign-in__forms-container__forms">
+      <form action="" class="sign-in__forms-container__forms__user-form">
+        <div>
+          <h1 class="sign-in__title">Данные пользователя</h1>
+        </div>
+        <div style="display: flex">
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Имя</mat-label>
+              <input matInput placeholder="Иван" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Фамилия</mat-label>
+              <input matInput placeholder="Иванов" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Ваш пол</mat-label>
+              <mat-select>
+                <mat-option value="man">Мужчина</mat-option>
+                <mat-option value="woman">Женщина</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Дата рождения</mat-label>
+              <input
+                placeholder="31/12/2000"
+                matInput
+                [matDatepicker]="picker"
+              />
+              <mat-datepicker-toggle
+                matIconSuffix
+                [for]="picker"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field>
+              <mat-label>Телефон</mat-label>
+              <span style="margin-left: 10px" matPrefix> +998 &nbsp;</span>
+              <input type="tel" matInput placeholder="940045832" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Эл. почта</mat-label>
+              <input matInput placeholder="ivanov.ii@gmail.com" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Введите пароль</mat-label>
+              <input matInput [type]="isPasswordHidden ? 'password' : 'text'" />
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="isPasswordHidden = !isPasswordHidden"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="isPasswordHidden"
+              >
+                <mat-icon>{{
+                  isPasswordHidden ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Повторите пароль</mat-label>
+              <input matInput [type]="isRepeatPasswordHidden ? 'password' : 'text'" />
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="isRepeatPasswordHidden = !isRepeatPasswordHidden"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="isRepeatPasswordHidden"
+              >
+                <mat-icon>{{
+                  isRepeatPasswordHidden ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
+
+      <form action="" class="sign-in__forms-container__forms__company-form">
+        <div>
+          <h1 class="sign-in__title">Данные компании</h1>
+        </div>
+        <div style="display: flex">
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Название бренда</mat-label>
+              <input matInput placeholder="KFC" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Юрид. название компании</mat-label>
+              <input matInput placeholder="OOO 'KFC Solutions'" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>ИНН</mat-label>
+              <input matInput placeholder="123543234" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Юр. адрес</mat-label>
+              <input matInput placeholder="ул. Афросиаб, 12, 564" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Дата получения свидетельства о регистрации</mat-label>
+              <input
+                placeholder="31/12/2000"
+                matInput
+                [matDatepicker]="pickerCompany"
+              />
+              <mat-datepicker-toggle
+                matIconSuffix
+                [for]="pickerCompany"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #pickerCompany></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Сайт</mat-label>
+              <input matInput placeholder="kfc.uz" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Почтовый индекс</mat-label>
+              <input matInput placeholder="2200285" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Кол-во сотрудников</mat-label>
+              <mat-select>
+                <mat-option value="<10">до 10</mat-option>
+                <mat-option value="<10">10-25</mat-option>
+                <mat-option value="<10">25-50</mat-option>
+                <mat-option value="<10">50-100</mat-option>
+                <mat-option value="<10">100-200</mat-option>
+                <mat-option value="<10">200-500</mat-option>
+                <mat-option value="<10">500-1000</mat-option>
+                <mat-option value="<10">1000+</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Деятельность</mat-label>
+              <mat-select>
+                <mat-option value="Красота и здоровье"
+                  >Красота и здоровье</mat-option
+                >
+                <mat-option value="Красота и здоровье">Еда</mat-option>
+                <mat-option value="Красота и здоровье">Авто</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field>
+              <mat-label>Телефон</mat-label>
+              <span style="margin-left: 10px" matPrefix> +998 &nbsp;</span>
+              <input type="tel" matInput placeholder="940045832" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Эл. почта</mat-label>
+              <input matInput placeholder="ivanov.ii@gmail.com" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>О компании</mat-label>
+              <textarea matInput></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
+    </section>
+  </section>
+</main>

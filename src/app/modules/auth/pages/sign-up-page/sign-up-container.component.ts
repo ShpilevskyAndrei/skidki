@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
 
-import { UnsubscribeDirective } from "../../../shared/directives/unsubscribe";
+import { UnsubscribeDirective } from '../../../shared/directives/unsubscribe';
 
 @Component({
   selector: 'app-sign-up-container-page',
-  template: `
-    <app-sign-up-page></app-sign-up-page>
-  `,
-  styleUrls: ['./sign-up-container.component.scss'],
+  template: ` <app-sign-up-page></app-sign-up-page> `,
 })
-export class SignUpContainerComponent extends UnsubscribeDirective  {}
+export class SignUpContainerComponent extends UnsubscribeDirective {}

@@ -1,4 +1,54 @@
-<main class="sign-up">
-  <h1 class="sign-up__title">Страница регистрации</h1>
-</main>
+<main class="sign-up container">
+  <section
+    style="
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: start;
+    "
+  >
+    <div>
+      <div class="sign-up__text-container">
+        <h1 class="sign-up__text-container__page">Регистрация</h1>
+        <p class="sign-up__text-container__text">
+          Мы рады приветствовать Вас на нашем агрегаторе скидок
+          <span class="sign-up__text-container__text__site">SKIDKI.UZ</span>
+        </p>
+        <p class="sign-up__text-container__text">
+          Выберите подходящую для вас роль для начала регистрации
+        </p>
+      </div>
 
+      <form [formGroup]="userRole" action="" class="sign-up__form">
+        <mat-radio-group
+          class="sign-up__form__radio-group"
+          formControlName="role"
+          aria-label="Select an option"
+        >
+          <mat-radio-button value="user">Пользователь</mat-radio-button>
+          <mat-radio-button value="company">Компания</mat-radio-button>
+        </mat-radio-group>
+      </form>
+
+      <div class="sign-up__btn-container">
+        <button class="sign-up__btn-container__btn" (click)="continueSignUp()">
+          Продолжить
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section style="width: 50%; min-height: 100%">
+    <img
+      style="
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 100%;
+        min-height: 100%;
+      "
+      src="https://i.ibb.co/hB72XnC/discounts.jpg"
+      alt=""
+    />
+  </section>
+</main>

@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import {NavigationEnd, Router} from "@angular/router";
-import {Observable} from "rxjs";
-import {IUser} from "../../../shared/interfaces/user.interface";
+import { Router } from '@angular/router';
+
+import { UnsubscribeDirective } from '../../../shared/directives/unsubscribe';
 
 @Component({
   selector: 'app-error-page',
   templateUrl: './error-page.component.html',
-  styleUrls: ['./error-page.component.scss']
+  styleUrls: ['./error-page.component.scss'],
 })
-export class ErrorPageComponent implements OnInit {
+export class ErrorPageComponent extends UnsubscribeDirective implements OnInit {
   public currentPath?: string;
   public url?: string;
   public fullPath?: string;
 
   public constructor(private router: Router) {
+    super();
   }
 
   public ngOnInit(): void {
@@ -22,9 +23,9 @@ export class ErrorPageComponent implements OnInit {
   }
 
   public defineCurrentPath(): void {
-    this.router.events.subscribe((event) => {
-        this.currentPath = this.router.url;
-        this.fullPath = `${this.url}${this.currentPath}`;
+    this.subscribeTo = this.router.events.subscribe(() => {
+      this.currentPath = this.router.url;
+      this.fullPath = `${this.url}${this.currentPath}`;
     });
   }
 

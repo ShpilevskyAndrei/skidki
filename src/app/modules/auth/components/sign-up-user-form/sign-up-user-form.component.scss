@@ -1,0 +1,36 @@
+@import "src/app/styles/@general-styles";
+
+:host {
+  .sign-in {
+    min-height: $content-height-size;
+    padding: 30px;
+    box-sizing: border-box;
+    margin: auto;
+    &__title {
+      font-size: $p-font-size-large-xxx;
+      color: $color-main-velvet;
+      font-weight: bold;
+    }
+    &__forms-container {
+      @include flex(column, flex-start, flex-start);
+      &__forms {
+        @include flex(row, flex-start, flex-start);
+        min-width: 100%;
+        &__user-form {
+          min-width: 50%;
+          @include flex(column, flex-start, flex-start);
+          div {
+            margin-right: 30px;
+          }
+        }
+        &__company-form {
+          min-width: 50%;
+          @include flex(column, flex-start, flex-start);
+          div {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
+}

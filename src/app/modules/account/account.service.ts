@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { AgroexToastService } from 'ngx-agroex-toast';
 
 import { HttpRequestService } from '../shared/services/http-request.service';
 import {
@@ -9,11 +10,10 @@ import {
 } from '../shared/interfaces/user.interface';
 import { ApisAccountEnum } from '../shared/enums/apis.enum';
 import { AuthService } from '../auth/auth.service';
-import { AgroexToastService } from 'ngx-agroex-toast';
 import { TOAST_CONFIG } from '../shared/constants/toast-config';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AccountService {
   public constructor(
@@ -34,12 +34,12 @@ export class AccountService {
   public updateUserInfo(userInfo: IUser | null): Subscription {
     return this.http.put(ApisAccountEnum.SetUserInfo, userInfo).subscribe({
       next: (res: any) => {
-        this.toastService.addToast(TOAST_CONFIG.account.updateUserInfo.success)
+        this.toastService.addToast(TOAST_CONFIG.account.updateUserInfo.success);
         return res;
       },
       error: () => {
-        this.toastService.addToast(TOAST_CONFIG.account.updateUserInfo.error)
-      }
+        this.toastService.addToast(TOAST_CONFIG.account.updateUserInfo.error);
+      },
     });
   }
 

@@ -4,9 +4,6 @@ import { UnsubscribeDirective } from "../../../shared/directives/unsubscribe";
 
 @Component({
   selector: 'app-sign-in-container-page',
-  template: `
-    <app-sign-in-page></app-sign-in-page>
-  `,
-  styleUrls: ['./sign-in-container.component.scss'],
+  template: `<app-sign-in-page></app-sign-in-page>`,
 })
 export class SignInContainerComponent extends UnsubscribeDirective {}

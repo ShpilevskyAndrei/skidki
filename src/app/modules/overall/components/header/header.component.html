@@ -1,15 +1,15 @@
 <header class="container header">
   <div class="header__logo">
     <div>
-    <p class="header__logo__name" routerLink="">SKIDKI.UZ</p>
-    <p class="header__logo__slogan">Экономить - это модно</p>
+      <p class="header__logo__name" routerLink="">SKIDKI.UZ</p>
+      <p class="header__logo__slogan">Экономить - это модно</p>
     </div>
-<!--    <nav class="header__nav-burger">-->
-<!--      <mat-icon style="color:#673ab7; height: 30px; width: 30px; font-size: 30px" [matMenuTriggerFor]="navItems">menu</mat-icon>-->
-<!--      <mat-menu #navItems="matMenu">-->
-<!--        <button *ngFor="let tool of tools" mat-menu-item routerLink="{{ tool.path }}">{{ tool.title }}</button>-->
-<!--      </mat-menu>-->
-<!--    </nav>-->
+    <!--    <nav class="header__nav-burger">-->
+    <!--      <mat-icon style="color:#673ab7; height: 30px; width: 30px; font-size: 30px" [matMenuTriggerFor]="navItems">menu</mat-icon>-->
+    <!--      <mat-menu #navItems="matMenu">-->
+    <!--        <button *ngFor="let tool of tools" mat-menu-item routerLink="{{ tool.path }}">{{ tool.title }}</button>-->
+    <!--      </mat-menu>-->
+    <!--    </nav>-->
   </div>
 
   <nav class="header__nav">
@@ -33,13 +33,13 @@
     </ul>
   </nav>
 
-  <div class="header__find">
-    <mat-icon
-      class="header__find__icon"
-      (click)="showFindFormVisibility($event)"
-      >search</mat-icon
-    >
-  </div>
+  <!--  <div class="header__find">-->
+  <!--    <mat-icon-->
+  <!--      class="header__find__icon"-->
+  <!--      (click)="showFindFormVisibility($event)"-->
+  <!--      >search</mat-icon-->
+  <!--    >-->
+  <!--  </div>-->
 
   <div class="header__account">
     <div>
@@ -66,7 +66,9 @@
       </button>
       <mat-menu #accountMenu="matMenu">
         <button mat-menu-item routerLink="/account/info">Мой аккаунт</button>
-        <button mat-menu-item routerLink="/account/change-password">Мои купоны</button>
+        <button mat-menu-item routerLink="/account/change-password">
+          Мои купоны
+        </button>
         <button mat-menu-item routerLink="/tickets2">
           Просмотренные купоны
         </button>

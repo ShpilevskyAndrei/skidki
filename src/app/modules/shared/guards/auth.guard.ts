@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  CanActivate,
-  Router,
-} from '@angular/router';
+import { CanActivate, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AgroexToastService } from 'ngx-agroex-toast';
 
@@ -20,10 +17,9 @@ export class AuthGuard implements CanActivate {
     private toastService: AgroexToastService
   ) {}
 
-  public canActivate(
-    // route: ActivatedRouteSnapshot,
-    // state: RouterStateSnapshot
-  ): Observable<boolean> | Promise<boolean> | boolean {
+  public canActivate(): // route: ActivatedRouteSnapshot,
+  // state: RouterStateSnapshot
+  Observable<boolean> | Promise<boolean> | boolean {
     if (this.authService.isSignedIn) {
       void this.router.navigate([RoutesEnum.SignIn]);
       this.toastService.addToast(TOAST_CONFIG.auth.isSignedIn.error);
