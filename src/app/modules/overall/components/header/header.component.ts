@@ -9,6 +9,7 @@ import { INavItem } from './interfaces/nav-item.interface';
 import { AccountService } from '../../../account/account.service';
 import { AuthService } from '../../../auth/auth.service';
 import { RoutesEnum } from '../../../shared/enums/routes.enum';
+import {APP_NAME} from "../../../shared/constants/app-name";
 
 @Component({
   selector: 'app-header',
@@ -21,6 +22,7 @@ export class HeaderComponent {
   @Input() public userInfo?: IUser | null;
 
   public routes = RoutesEnum;
+  public appName = APP_NAME;
 
   public isProgressBarWorks: Observable<number> | undefined;
   public tools: INavItem[] = NavItems;
@@ -42,7 +44,7 @@ export class HeaderComponent {
   //   });
   // }
 
-  public logOut(): void {
+  public signOut(): void {
     this.authService.signOut();
   }
 

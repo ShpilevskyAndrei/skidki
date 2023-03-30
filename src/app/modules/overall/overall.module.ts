@@ -18,6 +18,12 @@ import { ClickOutsideDirective } from '../shared/directives/click-outside.direct
 import { FooterComponent } from './components/footer/footer.component';
 import { FooterContainerComponent } from './components/footer/footer-container.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { UserPromoPageComponent } from './pages/user-promo-page/user-promo-page.component';
+import { VendorPromoPageComponent } from './pages/vendor-promo-page/vendor-promo-page.component';
+import { EmployerPromoPageComponent } from './pages/employer-promo-page/employer-promo-page.component';
+import { EmployerPromoPageContainerComponent } from './pages/employer-promo-page/employer-promo-page-container.component';
+import { UserPromoPageContainerComponent } from './pages/user-promo-page/user-promo-page-container.component';
+import { VendorPromoPageContainerComponent } from './pages/vendor-promo-page/vendor-promo-page-container.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +36,12 @@ import { MatDialogModule } from '@angular/material/dialog';
     ErrorPageComponent,
     ProgressBarComponent,
     ClickOutsideDirective,
+    UserPromoPageComponent,
+    VendorPromoPageComponent,
+    EmployerPromoPageComponent,
+    EmployerPromoPageContainerComponent,
+    UserPromoPageContainerComponent,
+    VendorPromoPageContainerComponent,
   ],
   imports: [
     CommonModule,

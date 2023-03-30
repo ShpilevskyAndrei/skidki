@@ -11,10 +11,10 @@
     max-width: 100%;
     z-index: 10;
     &__logo {
-      @include flex(column, center, center);
+      @include flex(column, flex-start, center);
       &__name {
         font-weight: bold;
-        font-size: $h-font-size-large-x;
+        font-size: $h-font-size-large;
         cursor: pointer;
         color: $color-main-velvet;
         transition: 0.2s linear;
@@ -79,9 +79,8 @@
       @include flex(row, center, flex-end);
       padding: 0 $offset-small-x;
       &__login-button {
-        @include button-additional;
-        flex: 1 1 auto;
-        margin: 0 $offset-small-x;
+        color: $color-main-velvet;
+        cursor: pointer;
       }
       &__signup-button {
         @include button-accent;

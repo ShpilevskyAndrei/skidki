@@ -1,7 +1,9 @@
 <header class="container header">
   <div class="header__logo">
-      <span class="header__logo__name" routerLink="">SKIDKI.UZ</span>
-      <span class="header__logo__slogan">Экономить - это модно</span>
+    <span class="header__logo__name" routerLink="">{{
+      appName.toUpperCase()
+    }}</span>
+    <span class="header__logo__slogan">Экономить - это модно</span>
     <!--    <nav class="header__nav-burger">-->
     <!--      <mat-icon style="color:#673ab7; height: 30px; width: 30px; font-size: 30px" [matMenuTriggerFor]="navItems">menu</mat-icon>-->
     <!--      <mat-menu #navItems="matMenu">-->
@@ -11,6 +13,20 @@
   </div>
 
   <nav class="header__nav">
+    <ul class="header__nav__list">
+      <li
+        class="header__nav__list__row"
+        routerLink="/discounts"
+        [ngClass]="
+          currentPath === '/discounts' ? 'header__nav__list__row__active' : ''
+        "
+      >
+        Скидки
+      </li>
+    </ul>
+  </nav>
+
+  <nav *ngIf="!userInfo?.id" class="header__nav">
     <ul class="header__nav__list">
       <li
         *ngFor="let tool of tools"
@@ -41,20 +57,13 @@
 
   <div class="header__account">
     <div>
-      <button
+      <mat-icon
         *ngIf="!userInfo"
         class="header__account__login-button"
         [routerLink]="routes.SignIn"
       >
-        Войти
-      </button>
-      <button
-        *ngIf="!userInfo"
-        class="header__account__signup-button"
-        [routerLink]="routes.SignUp"
-      >
-        Создать аккаунт
-      </button>
+        login
+      </mat-icon>
       <button
         *ngIf="userInfo"
         class="header__account__my-account-button"
@@ -70,7 +79,7 @@
         <button mat-menu-item routerLink="/tickets2">
           Просмотренные купоны
         </button>
-        <button mat-menu-item routerLink="" (click)="logOut()">Выйти</button>
+        <button mat-menu-item routerLink="" (click)="signOut()">Выйти</button>
       </mat-menu>
     </div>
   </div>

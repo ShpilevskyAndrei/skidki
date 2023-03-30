@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ErrorPageComponent } from './modules/overall/pages/error-page/error-page.component';
-import { DashboardPageContainerComponent } from './modules/overall/pages/dashboard-page/dashboard-page-container.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardPageContainerComponent },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./modules/overall/overall.module').then((m) => m.OverallModule),
+  },
   {
     path: 'sign',
     loadChildren: () =>

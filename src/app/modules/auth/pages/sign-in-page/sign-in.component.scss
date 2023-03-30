@@ -4,6 +4,7 @@
   .sign-in {
     @include flex(row, center, space-between);
     min-height: $content-height-size;
+    margin: 30px 0;
     &__text-container {
       margin-bottom: $offset-large-xxx;
       &__page {

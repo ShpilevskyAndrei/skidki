@@ -1,0 +1,15 @@
+@import "src/app/styles/@general-styles";
+
+:host {
+  .test {
+    @include flex(column, center, center);
+    min-height: $content-height-size;
+    min-width: 100%;
+    &__title {
+      font-size: $h-font-size-large-xxx;
+      color: $color-main-velvet;
+      margin: $offset-large-xx;
+      font-weight: bold;
+    }
+  }
+}
